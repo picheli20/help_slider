@@ -4,9 +4,11 @@ Include the js file and the html file (current the html route is fixed in 'views
 Inport the module  and in controller
 
 ``
-var app = angular.module('mainApp', ["helpSlider"]);
+var app = angular.module('mainApp', ["helpSlider"])
+.controller('mainController', ["Help", function(Help){}]);
+``
 
-.controller('mainController', ["Help", function(Help){
+``
   $scope.helpData = {
 			"module1" : {
 			  "title" 	 : "titel 1",
@@ -23,7 +25,7 @@ var app = angular.module('mainApp', ["helpSlider"]);
 		
 	  $scope.help = new Help($scope.helpData);
 
-}]);
+
 ``
 
 On HTML include the tag:
